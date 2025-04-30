@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Intake Tracking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Track Your Water Intake</h1>
+  </header>
+
+  <section class="water-tracking">
+    <div class="input-section">
+      <label for="waterIntake">Enter today's water intake (liters):</label>
+      <input type="number" id="waterIntakeInput" placeholder="In Liters" min="0" step="0.1">
+      <button onclick="trackWaterIntake()">Submit</button>
+    </div>
+
+    <div id="waterResult"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fitness Tracker. All rights reserved.</p>
+  </footer>
+
+  <script src="water.js"></script>
+</body>
+</html>

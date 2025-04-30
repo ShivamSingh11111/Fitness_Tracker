@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Tracker - Fitness Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Fitness Tracker</h1>
+            <p class="tagline">Unleash the Fittest Inside You</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workouts.html">Workouts</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="diet-container">
+        <h2>Diet Tracker</h2>
+
+        <!-- Food Entry Form -->
+        <section class="diet-form">
+            <input type="text" id="food-item" placeholder="Enter food item" required>
+            <input type="number" id="food-quantity" placeholder="Quantity (in grams)" required>
+            <input type="number" id="food-calories" placeholder="Calories per 100g" required>
+            <button id="add-food-btn">Add Food</button>
+        </section>
+
+        <!-- Diet Log Display -->
+        <section class="diet-log">
+            <h3>Your Diet Log:</h3>
+            <ul id="food-list">
+                <!-- Entries will appear here dynamically later -->
+            </ul>
+        </section>
+    </main>
+
+    
+    <!-- JavaScript directly inside diet.html -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const addFoodBtn = document.getElementById("add-food-btn");
+            const foodList = document.getElementById("food-list");
+
+            addFoodBtn.addEventListener("click", function() {
+                const foodItem = document.getElementById("food-item").value.trim();
+                const foodQuantity = document.getElementById("food-quantity").value.trim();
+                const caloriesPer100g = document.getElementById("food-calories").value.trim();
+
+                // Validate input fields
+                if (foodItem && foodQuantity && caloriesPer100g) {
+                    const quantity = parseFloat(foodQuantity);        // eg: 70g
+                    const per100gCalories = parseFloat(caloriesPer100g);  // eg: 52 per 100g
+
+                    console.log(`Food Item: ${foodItem}, Quantity: ${quantity}, Calories per 100g: ${per100gCalories}`);
+
+                    if (!isNaN(quantity) && !isNaN(per100gCalories)) {
+                        // Calculate total calories correctly based on quantity
+                        const totalCalories = (quantity / 100) * per100gCalories;
+                        console.log(`Total Calories: ${totalCalories}`);
+
+                        // Create a new list item for the food entry
+                        const li = document.createElement("li");
+                        li.innerHTML = `
+                            <strong>${foodItem}</strong> - ${quantity}g - ${totalCalories.toFixed(2)} kcal
+                            <button class="delete-food">Delete</button>
+                        `;
+
+                        // Add delete functionality to each list item
+                        li.querySelector(".delete-food").addEventListener("click", function() {
+                            li.remove();
+                        });
+
+                        // Append the new food entry to the list
+                        foodList.appendChild(li);
+
+                        // Clear input fields after adding the food
+                        document.getElementById("food-item").value = "";
+                        document.getElementById("food-quantity").value = "";
+                        document.getElementById("food-calories").value = "";
+                    } else {
+                        alert("Please enter valid numbers for quantity and calories.");
+                    }
+                } else {
+                    alert("Please fill all fields correctly.");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

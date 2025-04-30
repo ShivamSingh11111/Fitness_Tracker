@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Tracking - Fitness Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Fitness Tracker</h1>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="workouts.html">Workouts</a>
+            <a href="diet.html">Diet</a>
+            <a href="sleep.html" class="active">Sleep</a>
+            <a href="water.html">Water Intake</a>
+            <a href="progress.html">Progress</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+    </header>
+
+    <section class="sleep-section">
+        <h2>Track Your Sleep</h2>
+        <p>Log your daily sleep hours and check if you are meeting your sleep goals.</p>
+
+        <form class="sleep-form">
+            <label for="sleepHours">Hours Slept Last Night:</label>
+            <input type="number" id="sleepHours" name="sleepHours" min="0" max="24" required>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+
+        <div class="sleep-result">
+            <!-- Yaha par JavaScript se result aayega -->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Fitness Tracker | All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+</body>
+</html>

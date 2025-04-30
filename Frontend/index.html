@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Fitness Tracker</div>
+        <div class="tagline">Unleash the Fittest Inside You</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workouts.html">Workouts</a></li>
+                <li><a href="diet.html">Progress</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="welcome">
+            <h1>Welcome Back!</h1>
+            <p>Track your fitness, diet, and lifestyle goals easily.</p>
+        </section>
+
+        <section class="actions">
+            <button id="trackWorkoutBtn">Track Workout</button>
+            <button id="logDietBtn">Log Diet</button>
+            <button id="updateSleepBtn">Update Sleep/Water Intake</button>
+
+            <!-- BMI Calculator Section -->
+            <section id="bmi" class="tracker-section">
+              <h2>Calculate Your BMI</h2>
+              <div class="bmi-form">
+                <input type="number" id="height" placeholder="Enter Height (in cm)">
+                <input type="number" id="weight" placeholder="Enter Weight (in kg)">
+                <!-- Button to trigger BMI calculation page redirection -->
+                <button id="calculateBmiBtn">Calculate BMI</button>
+                <div id="bmi-result"></div>
+              </div>
+            </section>
+        </section>
+    </main>
+    <script src="script.js"></script>
+
+</body>
+</html>

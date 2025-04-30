@@ -1,0 +1,487 @@
+/* Reset default browser margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: #1c1c1c;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.tagline {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #cccccc;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* Main Content Styling */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.welcome h1 {
+    color:rgb(218, 218, 218);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    color: #bbbbbb;
+    margin-bottom: 30px;
+}
+
+/* Action Buttons */
+.actions button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+    background-color: #e65c00;
+}
+
+/* Workout Page Styling */
+.workout-page {
+    color:#ffffff;
+    padding: 30px;
+    text-align: center;
+}
+
+.exercise-list {
+    color:#ffffff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.exercise-list label {
+    background-color: #272727;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.exercise-list input {
+    margin-right: 10px;
+}
+
+.workout-buttons button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.workout-buttons button:hover {
+    background-color: #e65c00;
+}
+
+.calories-display {
+    color:#d1cece;
+    margin-top: 30px;
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Diet Tracker Page Styles */
+.diet-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.8);
+    color: #fff;
+}
+
+.diet-container h2, .diet-log h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: darkorange;
+}
+
+.diet-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.diet-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2e2e2e;
+    color: #fff;
+    font-size: 16px;
+}
+
+#add-food-btn {
+    padding: 10px;
+    background-color: darkorange;
+    color: #1e1e1e;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-food-btn:hover {
+    background-color: orangered;
+}
+
+.diet-log ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.diet-log li {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Sleep Page Styles */
+.sleep-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sleep-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FF7F50; /* dark orange */
+}
+
+.sleep-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.sleep-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sleep-form label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.sleep-form input {
+    padding: 10px;
+    width: 250px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.sleep-form .btn {
+    background-color: #FF7F50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sleep-form .btn:hover {
+    background-color: #ff5722;
+}
+
+.sleep-result {
+    margin-top: 30px;
+    font-size: 1.3rem;
+    color: #00FF00; /* green for success message */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer a {
+    color: #FF7F50;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #151515;
+  color: #363535;
+}
+
+header {
+  background-color: #252525;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+/* Water Tracking Styles */
+.water-tracking {
+  color:rgb(255, 255, 255);
+  margin: 20px;
+  padding: 20px;
+  background-color: rgb(44, 44, 44);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="number"] {    
+  padding: 10px;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #ff6600;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e65c00;
+}
+
+#waterResult {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* BMI Calculator Section */
+#bmi {
+    padding: 40px 20px;
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .bmi-form {
+    max-width: 400px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .bmi-form input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ff6600;
+    background: #333;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .bmi-form button {
+    padding: 12px;
+    background: #ff6600;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .bmi-form button:hover {
+    background: #e65c00;
+  }
+  
+  #bmi-result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  
+  /* Progress Page Styles */
+.progress-section {
+    padding: 30px;
+    background-color: #121212;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.progress-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: darkorange;
+}
+
+.progress-card {
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+}
+
+.progress-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: orange;
+}
+
+.progress-card p {
+    font-size: 1.2rem;
+}
+
+  
+
+/* Settings Page Styling */
+.settings {
+    color:#000000;
+    background-color: #484848;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.settings h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.settings label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.settings input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.settings button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.settings button:hover {
+    background-color: #e64a19;
+}
+
+  
+  

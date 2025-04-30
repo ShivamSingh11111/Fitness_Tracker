@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Fitness Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Fitness Tracker</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workouts.html">Workouts</a></li>
+                <li><a href="diet.html">Diet</a></li>
+                <li><a href="progress.html">Progress</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="settings">
+            <h2>Update Your Daily Goals</h2>
+            <form action="#" method="POST">
+                <label for="calories-goal">Daily Calories Goal (kcal):</label>
+                <input type="number" id="calories-goal" name="calories-goal" required>
+
+                <label for="water-goal">Daily Water Intake Goal (liters):</label>
+                <input type="number" id="water-goal" name="water-goal" step="0.1" required>
+
+                <label for="sleep-goal">Daily Sleep Goal (hours):</label>
+                <input type="number" id="sleep-goal" name="sleep-goal" step="0.1" required>
+
+                <label for="bmi-goal">BMI Goal:</label>
+                <input type="text" id="bmi-goal" name="bmi-goal" placeholder="e.g. Normal" required>
+
+                <button type="submit">Save Goals</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fitness Tracker. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
